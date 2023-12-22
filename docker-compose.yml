@@ -5,6 +5,11 @@ services:
     image: rabbitmq:3
     ports:
       - "5672:5672"
+  rabbitmq-management:
+    container_name: rabbitmq-management
+    image: rabbitmq:3-management
+    ports:
+      - "15672:15672"
   postgres:
     container_name: postgres
     image: postgres
