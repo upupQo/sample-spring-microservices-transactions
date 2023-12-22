@@ -13,6 +13,7 @@ class ProductController(val repository: ProductRepository) {
 
     @PutMapping("/{id}/count/{count}")
     fun updateCount(@PathVariable id: Int, @PathVariable count: Int): Product {
+        println("Product Id: $id, Count $count")
         val product: Product = repository.findById(id).get()
         product.count -= count
         repository.save(product)
