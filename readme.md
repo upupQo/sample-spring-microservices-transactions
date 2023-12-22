@@ -12,7 +12,7 @@ In this project I'm demonstrating a simple architecture of microservices that pe
 ## Getting Started 
 All the examples are described in a separated articles on my blog. Here's a full list of available examples:
 1. Rollback or confirmation of distributed transaction across order-service, account-service and product-service. A detailed guide may be find in the following article: [Distributed Transaction in Microservices with Spring Boot](https://piotrminkowski.com/2020/06/19/distributed-transactions-in-microservices-with-spring-boot/)
-2. 项目代码用的jdk21
+2. 项目代码用的jdk17
 ## Usage
 1. Start discovery-server. It is available on port 8761.
 2. Start RabbitMQ on Docker with command `docker run -d --name rabbit -h rabbit -p 5672:5672 -p 15672:15672 rabbitmq:3-management`
