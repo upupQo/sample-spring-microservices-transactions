@@ -49,7 +49,7 @@ class OrderController(val repository: OrderRepository,
         headers.set("X-Transaction-ID", transactionId)
         val entity: HttpEntity<*> = HttpEntity<Any?>(headers)
         val product = restTemplate.exchange("http://product-service/products/{id}/count/{count}",
-                HttpMethod.PUT, entity, Product::class.java, order.id, order.count)
+                HttpMethod.PUT, entity, Product::class.java, order.productId, order.count)
         return product.body!!
     }
 
